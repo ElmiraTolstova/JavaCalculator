@@ -20,7 +20,7 @@ public class DataReader {
         Integer[] arabic = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         String[] roman = {"X", "IX", "VIII", "VII", "VI", "V", "IV", "III", "II", "I"};
  
-        System.out.println("Введите выражение, состоящее из двух целых чисел от 0 до 10, знака операции и знака равно (напр. 2+2=): ");
+        System.out.println("Введите выражение, состоящее из двух целых чисел от 0 до 10, знака операции (напр. 2+2=): ");
         Scanner scanner = new Scanner(System.in);
         //StringBuilder builder = new StringBuilder();
         String text = scanner.nextLine() + ' ';
@@ -40,7 +40,7 @@ public class DataReader {
             // проверяем, входит ли строка blocks[0] в массив строк массива "roman"
             boolean flag = false;
             for (int i = 0; i < roman.length; i++){
-                if (roman[i].equals(blocks[0]) || roman[i].equals(blocks[1])){
+                if (roman[i].equals(blocks[0]) && roman[i].equals(blocks[1])){
                     flag = true;
                 }
                 //flag = true, значит будем иметь дело с римскими обозначениями
