@@ -11,7 +11,7 @@ public class DataReader {
  
     public DataReader(char exitCharacter) {
         this.exitCharacter = exitCharacter;
-        this.resultChar = '=';
+        this.resultChar = ' ';
     }
  
  
@@ -23,7 +23,7 @@ public class DataReader {
         System.out.println("Введите выражение, состоящее из двух целых чисел от 0 до 10, знака операции и знака равно (напр. 2+2=): ");
         Scanner scanner = new Scanner(System.in);
         //StringBuilder builder = new StringBuilder();
-        String text = scanner.nextLine();
+        String text = scanner.nextLine() + ' ';
         if (text.indexOf(exitCharacter) != -1) {
             exitFlag = true;
             return;
